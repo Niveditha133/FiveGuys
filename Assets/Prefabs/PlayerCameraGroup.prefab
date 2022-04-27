@@ -290,6 +290,23 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1219510589198998065}
+--- !u!114 &4514789463702546999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717278433779803491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cb83b81cec11a841bc4ff12c9dc5936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlockTypes:
+  - BlockName: Water
+    BlockMaterial: {fileID: 2100000, guid: 9b0eb6f6684d7ab42ab071a65222443e, type: 2}
+  - BlockName: Grass
+    BlockMaterial: {fileID: 2100000, guid: 51acd8d4c29569848a82be2b740c2b13, type: 2}
 --- !u!1001 &1219510589292115918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -302,13 +319,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1219510589198998065}
     - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
+        type: 3}
+    - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
+      propertyPath: BlockPrefab
+      value: 
+      objectReference: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
+        type: 3}
+    - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
+      propertyPath: Mask.m_Bits
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
       propertyPath: rotateSpeed
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
+      propertyPath: BlockGUIPrefab
+      value: 
+      objectReference: {fileID: 2086662631250008231, guid: aab8f2dc3026b4746b6882874357dbf0,
+        type: 3}
     - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
       propertyPath: rotateTowardsMouse
       value: 0
