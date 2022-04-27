@@ -27,12 +27,6 @@ public class TopDownCharacterMover : MonoBehaviour
         _input = GetComponent<InputHandler>();
     }
 
-    void Start()
-    {       
-        _blockSystem = GetComponent<BlockSystem>();
-        _blockGUI = Instantiate(BlockGUIPrefab, _buildPos, Quaternion.identity);
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -44,7 +38,7 @@ public class TopDownCharacterMover : MonoBehaviour
         else
             RotateTowardMouseVector();
     }
-
+ 
     private void RotateTowardMouseVector()
     {
         Ray ray = camera.ScreenPointToRay(_input.MousePosition);
@@ -64,13 +58,14 @@ public class TopDownCharacterMover : MonoBehaviour
         var rotation = Quaternion.LookRotation(movementVector);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
+
     /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Sticky"))
         {
             collision.transform.parent = this.transform;
         }
-    }*/    
+    }*/
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {

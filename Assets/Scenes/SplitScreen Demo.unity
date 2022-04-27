@@ -16270,7 +16270,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 8
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!64 &1062563109
 MeshCollider:
@@ -21783,7 +21783,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1348051968
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -21874,10 +21874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e437d5288ac67d5488247c559de154ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 100
-  Size: 1
-  _rigidbody: {fileID: 0}
-  _camera: {fileID: 0}
 --- !u!4 &1348051973
 Transform:
   m_ObjectHideFlags: 0
