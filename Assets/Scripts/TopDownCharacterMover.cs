@@ -95,7 +95,7 @@ public class TopDownCharacterMover : MonoBehaviour
         {
             _blockSystem = GetComponent<BlockSystem>();
             _blockGUI = Instantiate(BlockGUIPrefab, _buildPos, Quaternion.identity);
-            //BuildBlock();
+            BuildBlock();
         }
 
         private void BuildBlock()
@@ -147,4 +147,5 @@ public class TopDownCharacterMover : MonoBehaviour
     }
 }
 }
+
 
