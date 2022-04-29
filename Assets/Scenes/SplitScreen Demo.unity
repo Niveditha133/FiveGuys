@@ -16575,7 +16575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fighters:
   - {fileID: 1219510587556422977, guid: 3718f02dd170a8e44bff3bd831b32118, type: 3}
-  - {fileID: 2842179622461817540, guid: 2adaa0c3605d9dc43b637d47936d6568, type: 3}
+  - {fileID: 1219510587556422977, guid: cd9e269ff3d418e4eaa98e4596a6b120, type: 3}
 --- !u!114 &1070157636
 MonoBehaviour:
   m_ObjectHideFlags: 0

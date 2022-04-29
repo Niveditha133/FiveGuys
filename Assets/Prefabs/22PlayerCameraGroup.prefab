@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2842179622461817539}
   m_Layer: 0
-  m_Name: 2PlayerCameraGroup
+  m_Name: 22PlayerCameraGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

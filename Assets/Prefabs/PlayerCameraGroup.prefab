@@ -328,6 +328,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1184398550, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
       propertyPath: BlockPrefab
       value: 
       objectReference: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
