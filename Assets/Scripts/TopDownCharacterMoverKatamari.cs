@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TopDownCharacterMover : MonoBehaviour
+public class TopDownCharacterMoverKatamari : MonoBehaviour
 {
     private InputHandler _input;
     public GameObject prefab;
@@ -71,13 +71,13 @@ public class TopDownCharacterMover : MonoBehaviour
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed * Time.deltaTime);
     }
 
-    /*private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Sticky"))
         {
             collision.transform.parent = this.transform;
         }
-    }*/
+    }
 
     private Vector3 MoveTowardTarget(Vector3 targetVector)
     {
