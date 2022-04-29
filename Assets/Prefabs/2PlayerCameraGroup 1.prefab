@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1daf22de5438cea44b3ed1e4a9fb8dda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTransform: {fileID: 1717278433779803495}
+  TargetTransform: {fileID: 1821011569067242528}
 --- !u!1 &1219510589508611735
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,12 +512,9 @@ GameObject:
   - component: {fileID: 1821011569067242530}
   - component: {fileID: 1821011569067242531}
   - component: {fileID: 1649286664011822230}
-  - component: {fileID: 2197164632610593369}
-  - component: {fileID: 2197164632610593375}
   - component: {fileID: 5129979455386255287}
+  - component: {fileID: 2197164632610593369}
   - component: {fileID: 6416482666464548127}
-  - component: {fileID: 5454455735334734598}
-  - component: {fileID: 4771588629271566351}
   m_Layer: 0
   m_Name: StickyCharacterPrefab
   m_TagString: Untagged
@@ -621,42 +618,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 2
---- !u!114 &2197164632610593369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011569067242532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7d15d1324c5d347b1d5d46fe4f381e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2197164632610593375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011569067242532}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a116a6b2e6ba154391d1a695ea81d73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa, type: 3}
-  Mask:
-    serializedVersion: 2
-    m_Bits: 192
-  BlockGUIPrefab: {fileID: 2086662631250008231, guid: aab8f2dc3026b4746b6882874357dbf0,
-    type: 3}
-  BlockPrefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
-    type: 3}
-  moveSpeed: 4
-  rotateSpeed: 150
-  rotateTowardsMouse: 0
-  camera: {fileID: 1219510589198998065}
 --- !u!114 &5129979455386255287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,18 +630,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5506519113705c48a93ce101d1bc925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa, type: 3}
+  prefab: {fileID: 0}
   Mask:
     serializedVersion: 2
-    m_Bits: 192
-  BlockGUIPrefab: {fileID: 2086662631250008231, guid: aab8f2dc3026b4746b6882874357dbf0,
-    type: 3}
-  BlockPrefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
-    type: 3}
+    m_Bits: 4294967295
+  BlockGUIPrefab: {fileID: 0}
+  BlockPrefab: {fileID: 0}
   moveSpeed: 4
   rotateSpeed: 150
   rotateTowardsMouse: 0
   camera: {fileID: 1219510589198998065}
+--- !u!114 &2197164632610593369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821011569067242532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7d15d1324c5d347b1d5d46fe4f381e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6416482666464548127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,47 +747,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 1219510589198998065}
---- !u!114 &5454455735334734598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011569067242532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cb83b81cec11a841bc4ff12c9dc5936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BlockTypes:
-  - BlockName: Water
-    BlockMaterial: {fileID: 2100000, guid: 9b0eb6f6684d7ab42ab071a65222443e, type: 2}
-  - BlockName: Grass
-    BlockMaterial: {fileID: 2100000, guid: 51acd8d4c29569848a82be2b740c2b13, type: 2}
---- !u!114 &4771588629271566351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1821011569067242532}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a116a6b2e6ba154391d1a695ea81d73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa, type: 3}
-  Mask:
-    serializedVersion: 2
-    m_Bits: 192
-  BlockGUIPrefab: {fileID: 2086662631250008231, guid: aab8f2dc3026b4746b6882874357dbf0,
-    type: 3}
-  BlockPrefab: {fileID: 5338102942332438637, guid: c81d40e9bba51394d90258cc390fbefa,
-    type: 3}
-  moveSpeed: 4
-  rotateSpeed: 150
-  rotateTowardsMouse: 0
-  camera: {fileID: 1219510589198998065}
 --- !u!1 &1821011570192238951
 GameObject:
   m_ObjectHideFlags: 0

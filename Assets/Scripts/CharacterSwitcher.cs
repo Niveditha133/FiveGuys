@@ -13,14 +13,17 @@ public class CharacterSwitcher : MonoBehaviour
     void Start()
     {
         manager = GetComponent<PlayerInputManager>();
-        index = Random.Range(0, fighters.Count);
+        //index = Random.Range(0, fighters.Count);
+        index = 0;
         manager.playerPrefab = fighters[index];
     }
 
     // Update is called once per frame
     public void SwitchNextSpawnCharacter(PlayerInput input)
     {
-        index = Random.Range(0, fighters.Count);
+        //index = Random.Range(0, fighters.Count);
+        index++;
+        if (index >= fighters.Count) { index = 0; }
         manager.playerPrefab = fighters[index];
     }
 }
