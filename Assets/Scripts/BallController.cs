@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public float Speed = 30f;
-    private Camera _camera;
+    public Camera _camera;
     private Rigidbody _rigidBody;
 
 
@@ -14,7 +14,7 @@ public class BallController : MonoBehaviour
     void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
-        _camera = Camera.main; //just grab the camera by using main
+        _camera = Camera.current; //just grab the camera by using main
     }
 
     private float Size = 1;
