@@ -14,15 +14,15 @@ public class BallController : MonoBehaviour
     void Start()
     {
         _rigidBody = gameObject.GetComponent<Rigidbody>();
-        _camera = Camera.current; //just grab the camera by using main
+        _camera = Camera.main; //just grab the camera by using main
     }
 
     private float Size = 1;
     // Update is called once per frame
     private void FixedUpdate() //mainly for using physics operations in unity
     {
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float x = Input.GetAxis("LeftJoyX");
+        float z = Input.GetAxis("LeftJoyY");
         Vector3 input = new Vector3(x, 0, z); //getting new vectors
         //Debug.Log(input);              
         Vector3 move = (input.z * _camera.transform.forward) + (input.x * _camera.transform.right);

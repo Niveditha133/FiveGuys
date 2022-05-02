@@ -45,8 +45,8 @@ public class BuildingSystem : MonoBehaviour
 
 
         //loop through block types 
-        if(Input.GetMouseButton(1))
-        {
+        if (Input.GetMouseButton(1))            
+            {
             typeSelect++; //increment type select by 1, the same as typeselect = typeselect +1;
             if(typeSelect >= _blockSystem.Blocks.Count)
             {
@@ -58,7 +58,7 @@ public class BuildingSystem : MonoBehaviour
         //build blocks
         if(_canBuild)
         {
-            if(Input.GetMouseButtonDown(0))
+            if(Input.GetMouseButtonDown(0))                
             {
                 PlaceBlock();
             }
