@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SplitScreen Demo.unity
+    guid: f4f99cef2bc6712479e8e22f4fd37e6b
   m_configObjects: {}

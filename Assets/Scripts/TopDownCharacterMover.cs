@@ -29,13 +29,18 @@ public class TopDownCharacterMover : MonoBehaviour
     [SerializeField]
     private bool rotateTowardsMouse;
 
-    [SerializeField]
-    private Camera camera;
+    //[SerializeField]
+    //private Camera camera;
 
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
+    }
 
+    private void Start()
+    {
+        _camera = Camera.main;
+        StartBlock();
     }
 
     // Update is called once per frame
@@ -48,13 +53,13 @@ public class TopDownCharacterMover : MonoBehaviour
             RotateTowardMovementVector(movementVector);
         else
             RotateTowardMouseVector();
-        //StartBlock();
+
+        BuildBlock();
     }
 
     private void RotateTowardMouseVector()
     {
-        Ray ray = camera.ScreenPointToRay(_input.MousePosition);
-
+        Ray ray = _camera.ScreenPointToRay(_input.MousePosition);
         if (Physics.Raycast(ray, out RaycastHit hitInfo, maxDistance: 300f))
         {
             var target = hitInfo.point;
@@ -83,7 +88,7 @@ public class TopDownCharacterMover : MonoBehaviour
     {
         var speed = moveSpeed * Time.deltaTime;
 
-        targetVector = Quaternion.Euler(0, camera.gameObject.transform.eulerAngles.y, 0) * targetVector;
+        targetVector = Quaternion.Euler(0, _camera.gameObject.transform.eulerAngles.y, 0) * targetVector;
         var targetPosition = transform.position + targetVector * speed;
         transform.position = targetPosition;
         return targetVector;
@@ -91,33 +96,31 @@ public class TopDownCharacterMover : MonoBehaviour
 
     }   
 
-        private void StartBlock()
-        {
-            _blockSystem = GetComponent<BlockSystem>();
-            _blockGUI = Instantiate(BlockGUIPrefab, _buildPos, Quaternion.identity);
-            BuildBlock();
-        }
+    private void StartBlock()
+    {
+        _blockSystem = GetComponent<BlockSystem>();
+        _blockGUI = Instantiate(BlockGUIPrefab, _buildPos, Quaternion.identity);
+        BuildBlock();
+    }
 
-        private void BuildBlock()
+    private void BuildBlock()
+    {      
+        //find the blocks build location
+        RaycastHit hit; //shoot ray in direction of camera from centre of screen -- Why are we hitting from the centre of the screen, can that not be from the camera itself because that's where our blockmanager is??
+        if (Physics.Raycast(_camera.ScreenPointToRay(new Vector3(Screen.width / 4, Screen.height / 2, 0)), out hit, 10, Mask)) // what is out hit??
         {
-            {
-                //find the blocks build location
-                RaycastHit hit; //shoot ray in direction of camera from centre of screen -- Why are we hitting from the centre of the screen, can that not be from the camera itself because that's where our blockmanager is??
-                if (Physics.Raycast(_camera.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0)), out hit, 10, Mask)) // what is out hit??
-                {
-                    Vector3 pos = hit.point; //get hit position
-                    _buildPos = new Vector3(Mathf.Round(pos.x), Mathf.Round(pos.y), Mathf.Round(pos.z)); //keep the block in a grid
-                    _canBuild = true;
-                    _blockGUI.transform.position = _buildPos;//update transparent cube position
-                }
-                else
-                {
-                    _canBuild = false;
-                }
+            Vector3 pos = hit.point; //get hit position
+            _buildPos = new Vector3(Mathf.Round(pos.x), Mathf.Round(pos.y), Mathf.Round(pos.z)); //keep the block in a grid
+            _canBuild = true;
+            _blockGUI.transform.position = _buildPos;//update transparent cube position
+        }
+        else
+        {
+            _canBuild = false;
+        }
                 
         //loop through block types 
-        if (Input.GetMouseButton(1))
-
+        //if (_input.)
         {
             typeSelect++; //increment type select by 1, the same as typeselect = typeselect +1;
             if (typeSelect >= _blockSystem.Blocks.Count)
@@ -134,7 +137,7 @@ public class TopDownCharacterMover : MonoBehaviour
             {
                 PlaceBlock();
             }
-        }
+        }       
     }
 
     void PlaceBlock()
@@ -145,7 +148,6 @@ public class TopDownCharacterMover : MonoBehaviour
         block.GetComponent<MeshRenderer>().material = type.BlockMaterial; // can set speed, navmesh agent, target location - add thigs in struct and can replace the information which is on struct
 
     }
-}
 }
 
 

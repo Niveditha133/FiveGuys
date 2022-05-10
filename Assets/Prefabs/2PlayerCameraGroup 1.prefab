@@ -1235,6 +1235,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Katamari Player (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1229813546201777902, guid: c4840430985bbb34abcd54ee17adad7e,
+        type: 3}
+      propertyPath: Speed
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1229813546201777903, guid: c4840430985bbb34abcd54ee17adad7e,
         type: 3}
       propertyPath: m_RootOrder

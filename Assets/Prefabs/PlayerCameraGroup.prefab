@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1219510587556422982}
   m_Layer: 0
   m_Name: PlayerCameraGroup
-  m_TagString: Untagged
+  m_TagString: Sticky
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,6 +353,16 @@ PrefabInstance:
       propertyPath: rotateTowardsMouse
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 520286463334117358, guid: 8e2e1e0d075144a49b9af20827814832,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sticky
+      objectReference: {fileID: 0}
+    - target: {fileID: 520286463913272705, guid: 8e2e1e0d075144a49b9af20827814832,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sticky
+      objectReference: {fileID: 0}
     - target: {fileID: 520286464390927017, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_RootOrder
@@ -416,7 +426,12 @@ PrefabInstance:
     - target: {fileID: 520286464390927021, guid: 8e2e1e0d075144a49b9af20827814832,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Sticky
+      objectReference: {fileID: 0}
+    - target: {fileID: 520286464685432543, guid: 8e2e1e0d075144a49b9af20827814832,
+        type: 3}
+      propertyPath: m_TagString
+      value: Sticky
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2e1e0d075144a49b9af20827814832, type: 3}
