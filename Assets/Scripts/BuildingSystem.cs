@@ -9,7 +9,7 @@ public class BuildingSystem : MonoBehaviour
     public GameObject BlockPrefab;
 
     //set at the beginning 
-    private Camera _camera;
+    public Camera _camera;
     private BlockSystem _blockSystem;
     private GameObject _blockGUI;
 
@@ -59,6 +59,26 @@ public class BuildingSystem : MonoBehaviour
         if(_canBuild)
         {
             if(Input.GetMouseButtonDown(0))                
+            {
+                PlaceBlock();
+            }
+        }
+
+        //loop through block types 
+        if (Input.GetButtonDown("South"))
+        {
+            typeSelect++; //increment type select by 1, the same as typeselect = typeselect +1;
+            if (typeSelect >= _blockSystem.Blocks.Count)
+            {
+                typeSelect = 0;
+            }
+
+        }
+
+        //build blocks
+        if (_canBuild)
+        {
+            if (Input.GetButtonDown("South"))
             {
                 PlaceBlock();
             }
